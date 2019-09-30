@@ -70,6 +70,6 @@ turtle.end_fill()
  
  
 turtle.hideturtle()
-# 隐藏小海龟
+# 隐藏小海龟哦
 # 维持面板
 turtle.done()
