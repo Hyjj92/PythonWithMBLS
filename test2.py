@@ -1,4 +1,3 @@
-# author : momo
 import turtle
 # 中国国旗
 turtle.up()
