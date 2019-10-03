@@ -1,0 +1,19 @@
+10、print函数格式化
+
+11、from<库名> import <函数名>  或者  from<库名> import * 的方式时调用函数，
+          无需用库名 . 的方式，可以使用：函数名（参数）的方式。（但不推荐使用这种方式）
+     使用import和as方式：import<库名> as<库别名>，库别名.函数名（参数） 的方式。
+12、turtle.setup(length,width,x,y)  设置窗体的大小和窗口的位置
+        turtle.penup() ==  turtle.pu()	turtle.pendown() == turtle.pd()   调整海龟的位置
+        tuetle.pensize() == turtle.width()	turtle.pencolor(color)   color可以是字符串，如："purple"   也可以是rgb
+        turtle.forward()  ==  turtle.fd()
+        turtle.circle(r, extent)   根据半径r绘制extent角度的弧度
+          r：默认圆心在海龟的左侧r距离的位置    extent：绘制角度，默认为360度（逆时针）
+        turtle.setheading()   ==  turtle.seth()  改变海龟的朝向
+        turtle.left() ，turtle.right()   
+        turtle.done()
+13、for <变量> in range (参数)
+          eg：for i  in  range (5)  i从0开始  /  range(2, 5)  产生2，3，4
+        print("hello wold"，i)
+14、不确定尾数：0.1+0.2 == 0.3  Flase	
+           round（x，d）  四舍五入   x 数  d 四舍五入的位数 ，可省略
