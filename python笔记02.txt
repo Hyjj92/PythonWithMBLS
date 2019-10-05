@@ -1,0 +1,29 @@
+15、字符串中出现：”则字符串用‘ 扩起 ； 字符串中出现：‘ 则字符串用 ”扩起；字符串中即出现“ 又出现 ’，则字符串用 ''' （三个单引号）扩起
+           或者使用在转义字符 \
+16、字符串函数：len(s) 长度   str(s) 讲s变成字符串  hex(x)  将整数x变成16进制小写字符串
+	oct(x)  将整数x变成8进制小写字符串   chr（U）返回U的Unicode对应的字符     ord(s) 返回s对应的Unicode编码    使用Unicode16
+17、   print（"aaaaa"，end=""）   不换行
+18、str.lower()，str.upper()   将一个字符串中的字母变成全部小写  或者  全部大写
+       str.split(sep)  返回一个列表  eg："A,B,C".split(,)  结果为 [ 'A'，'B' ，'C' ]
+       str.count(sub)  返回字串sub在str中出现的次数
+       str.replace(old，new)  将str中的 全部 old替换为 new
+       str.strip(chars)  去除掉str左右两边的chars中列出的字符
+       str.join(iter)  在iter字符串中每个元素中间加入 str  eg："，".join("123")  结果为1，2，3
+19、字符串格式化
+          使用format()方法：<模板字符串>.format()
+          槽：占位信息符   只在字符串中有用
+          eg：“{ 1 } 计算机 { 0 } 的CPU占有率为 { 2 } %”. format("2019-10-04", c, 10)  数字代表参数的序号
+        槽内部对格式化的配置
+           使用 ：作为引导符号   "{0：=^20}".format("aaaa")   表示用 等号填充空余位置  居中对齐（<左对齐  >右对齐）  槽总长度20
+          第4、5、6个控制符 < , >、< .精度 >、< 类型 >  表示  ④数字的千位分隔符  ⑤小数精度或字符串的最大输出长度  
+	⑥整数类型 b c d o x X 浮点数类型 e E f %
+	eg："{ 0: , .2f }".format(1234.5678)   结果: '1,234.56'
+20、time库
+          时间获取：time() , ctime() , gmtime()
+	time() 获得当前时间戳time.time()  ctime() 以字符串的形式获得一个易读的时间 time.ctime()  gmtime() 返回一个程序可以利用的时间（计算机内部时间）
+          时间格式化：strftime() , strptime()
+	①strftime(tpl, ts)  tpl：时间模板   ts：计算机内部时间类型变量
+	    time.strftime( "%Y-%m-%d  %H:%m:%S", time.gmtime() )  %B 月份的英文全称  %b 月份的缩写 %A 星期  %I(大写ai) 十二小时制 %p 上下午
+	②strptime(str, tpl )  返回计算机时间变量
+	    timestr = '2019-10-04  20:24:00'   time.strptime(timestr,  "%Y-%m-%d  %H:%m:%S" )
+          程序计时：sleep() 单位是秒  , 测量时间 ：perf_counter() 计数起点不确定，故差值才有意义
