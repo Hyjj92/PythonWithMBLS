@@ -1,0 +1,35 @@
+39、元组：是一种容器数据类型，可以用一个变量（对象）来存储多个数据，不同之处在于元组的元素不能修改。定义元组可以将元组的元素放在 （ ） 中
+40、基本操作
+	定义：t = (“戴智文”，26，True，“江苏宜兴”)
+	输出与遍历：print(t[0])； for member in t:    print(member)
+	将元组转换成列表：person = list(t)
+	将列表转换成元组：fruits_list = ['apple', 'banana', 'orange']
+		              fruits_tuple = tuple(fruits_list)
+41、讨论：在有列表的情况下，为什么还需要元组
+	①元组中的元素是无法修改的，事实上我们在项目中尤其是多线程环境中可能更喜欢使用的是那些不变对象。所以如果不需要对元素进行添加、删除、
+	    修改的时候，可以考虑使用元组，当然如果一个方法要返回多个值，使用元组也是不错的选择。
+	②元组在创建时间和占用的空间上面都优于列表。
+
+42、集合：Python中的集合跟数学上的集合是一致的，不允许有重复元素，而且可以进行交集、并集、差集等运算。定义集合可以将集合中的元素放在 { } 中。
+43、创建集合
+	set1 = {1, 2, 3, 3, 3, 2}  # set1 = {1,2,3}
+	set2 = set(range(1, 10))
+	set3 = set((1, 2, 3, 3, 2, 1))  #set3 = {1,2,3}
+	set4 = {num for num in range(1, 100) if num % 3 == 0 or num % 5 == 0}
+44、增删
+	增：① set1.add(5)；② set2.update([11, 12])
+	删：① set2.discard(5) ② if 4 in set2:    set2.remove(4)  ③ set3.pop()  移除一个元素（默认最后一个元素），并且返回该元素的值。
+45、交集，并集，差集，对称差
+	交集：set1 & set   或者   set1.intersection(set2)
+	并集：set1 | set2   或者   set1.union(set2)
+	差集：set1 - set2   或者   set1.difference(set2)
+	对称差：set1 ^ set2   或者   set1.symmetric_difference(set2)
+46、子集和父集
+	父集：里面有 >和>=   返回值是True或False
+		set1 > set2 set1是不是set2的真父集，不能相等的那种
+		set1 >= set2 或者 set1.issuperset(set2) set1是不是set2 的父集，可以相等的
+	子集：里面有 <和<=  返回值是True或False
+		set1 < set2 set1是不是set2的真子集，不能相等的那种
+		set1 <= set2 或者 set1.issubset(set2) set1是不是set2 的子集，可以相等的
+
+47、字典：可以存储任意类型对象，字典的每个元素都是由一个键和一个值组成的“键值对”，键和值通过冒号分开。
